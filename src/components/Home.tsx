@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { ArrowRight, Shield, Clock, Award } from 'lucide-react';
+import { ArrowRight, Shield, Clock, Award, Link, Locate } from 'lucide-react';
 
-const Hero: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -33,10 +33,21 @@ const Hero: React.FC = () => {
               <span className="flex items-center justify-center space-x-2">
                 <span>Book Your Flight</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                <Link
+                  to="/Flights"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl"
+                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
+                ></Link>
               </span>
             </button>
             <button className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
               Explore Destinations
+              <Locate className="h-5 w-5 inline-block ml-2" />
+              <Link
+                  to="/Flights"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl"
+                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
+              ></Link>
             </button>
           </div>
 
@@ -77,4 +88,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default Home;

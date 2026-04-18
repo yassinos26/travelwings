@@ -41,12 +41,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Book a Flight</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Manage Booking</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Check-in Online</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Flight Status</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Baggage Info</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">Travel Insurance</a></li>
+              <li><a href="/flights" className="text-gray-300 hover:text-white transition-colors duration-200">Book a Flight</a></li>
+              <li><a href="/destinations" className="text-gray-300 hover:text-white transition-colors duration-200">Manage Booking</a></li>
+              <li><a href="/Deals" className="text-gray-300 hover:text-white transition-colors duration-200">Check-in Online</a></li>
+              <li><a href="/Deals" className="text-gray-300 hover:text-white transition-colors duration-200">Travel Insurance</a></li>
             </ul>
           </div>
 
@@ -60,7 +58,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">yassine.205mellouli@gmail.com</span>
+                <span className="text-gray-300">yassine.250mellouli@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 mt-1" />
@@ -77,16 +75,16 @@ const Footer: React.FC = () => {
         <div className="py-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-300 mb-4 md:mb-0">
-              © 2025 SkyWings Airlines . created by yassine mellouli.
+              © 2025 SkyWings . created by yassine mellouli.
             </div>
             <div className="flex items-center space-x-8">
-              <a href="../../Privacy_Policy.md" className="text-gray-300 hover:text-white transition-colors duration-200">
+              <a href="./Privacy_Policy.md" className="text-gray-300 hover:text-white transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="../../Terms_of_Service.md" className="text-gray-300 hover:text-white transition-colors duration-200">
+              <a href="./Terms_of_Service.md" className="text-gray-300 hover:text-white transition-colors duration-200">
                 Terms of Service
               </a>
-              <a href="../../Cookie_Policy.md" className="text-gray-300 hover:text-white transition-colors duration-200">
+              <a href="./Cookie_Policy.md" className="text-gray-300 hover:text-white transition-colors duration-200">
                 Cookie Policy
               </a>
             </div>

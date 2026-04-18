@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import { Search, MapPin, Calendar, Users, ArrowRightLeft } from 'lucide-react';
 
-const FlightSearch: React.FC = () => {
+const Flights: React.FC = () => {
   const [tripType, setTripType] = useState('roundtrip');
   const [passengers, setPassengers] = useState(1);
 
@@ -153,4 +153,4 @@ const FlightSearch: React.FC = () => {
   );
 };
 
-export default FlightSearch;
+export default Flights;

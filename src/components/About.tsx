@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Star, Quote } from 'lucide-react';
 
-const testimonials = [
+const About = [
   {
     id: 1,
     name: 'Sarah Johnson',
@@ -45,7 +45,7 @@ const Testimonials: React.FC = () => {
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
+          {About.map((testimonial) => (
             <div 
               key={testimonial.id}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative"
@@ -105,4 +105,4 @@ const Testimonials: React.FC = () => {
   );
 };
 
-export default Testimonials;
+export default About;

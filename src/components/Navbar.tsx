@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import { Menu, X, Plane } from 'lucide-react';
 
-const Header: React.FC = () => {
+const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -88,4 +88,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Navbar;

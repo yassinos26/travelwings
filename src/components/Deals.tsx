@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Clock, Percent, Gift } from 'lucide-react';
+import { Clock, Gift } from 'lucide-react';
 
 const deals = [
   {
