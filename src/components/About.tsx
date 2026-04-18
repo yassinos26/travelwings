@@ -1,7 +1,15 @@
-import * as React from 'react';
 import { Star, Quote } from 'lucide-react';
 
-const About = [
+type Testimonial = {
+  id: number;
+  name: string;
+  location: string;
+  content: string;
+  rating: number;
+  avatar: string;
+};
+
+const data: Testimonial[] = [
   {
     id: 1,
     name: 'Sarah Johnson',
@@ -28,7 +36,7 @@ const About = [
   }
 ];
 
-const Testimonials: React.FC = () => {
+const About = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,11 +51,11 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
+        {/* data Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {About.map((testimonial) => (
+          {data.map((item) => (
             <div 
-              key={testimonial.id}
+              key={item.id}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative"
             >
               {/* Quote Icon */}
@@ -55,26 +63,26 @@ const Testimonials: React.FC = () => {
               
               {/* Rating */}
               <div className="flex items-center space-x-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(item.rating)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                 ))}
               </div>
 
               {/* Content */}
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
-                "{testimonial.content}"
+                "{item.content}"
               </p>
 
               {/* Author */}
               <div className="flex items-center space-x-4">
                 <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
+                  src={item.avatar}
+                  alt={item.name}
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-slate-800">{testimonial.name}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.location}</p>
+                  <h4 className="font-semibold text-slate-800">{item.name}</h4>
+                  <p className="text-gray-500 text-sm">{item.location}</p>
                 </div>
               </div>
             </div>
