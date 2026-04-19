@@ -1,6 +1,5 @@
 import { useRouteError, Navigate } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
 import  {Root}  from "./components/Root";
 import  Home  from "./components/Home";
 import  Flights  from "./components/Flights";
@@ -46,16 +45,16 @@ function RouteError() {
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Root />,
     errorElement: <Navigate to="/" replace />,
     children: [
       { index: true, element: <Home /> },
-      { path: "Flights", element: <Flights /> },
-      { path: "Destinations", element: <Destinations /> },
-      { path: "Deals", element: <Deals /> },
-      { path: "About", element: <About /> },
-      { path: "Privacy", element: <Privacy /> },
-      { path: "terms", element: <Terms /> },
+      { path: "/Flights", element: <Flights /> },
+      { path: "/Destinations", element: <Destinations /> },
+      { path: "/Deals", element: <Deals /> },
+      { path: "/About", element: <About /> },
+      { path: "/Privacy", element: <Privacy /> },
+      { path: "/terms", element: <Terms /> },
       { path: "*", element: <Navigate to="/" replace /> },
     ],
   },

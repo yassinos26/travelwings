@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { useState } from 'react';
 import { Menu, X, Plane } from 'lucide-react';
 
-const Navbar: React.FC = () => {
+const Navbar= () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -22,19 +21,19 @@ const Navbar: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#home" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/home" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Home
               </a>
-              <a href="#flights" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/flights" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Flights
               </a>
-              <a href="#destinations" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/destinations" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Destinations
               </a>
-              <a href="#deals" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/deals" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Deals
               </a>
-              <a href="#about" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/about" className="text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 About
               </a>
             </div>
@@ -62,19 +61,19 @@ const Navbar: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
-              <a href="#home" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/home" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Home
               </a>
-              <a href="#flights" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/flights" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Flights
               </a>
-              <a href="#destinations" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/destinations" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Destinations
               </a>
-              <a href="#deals" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/deals" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 Deals
               </a>
-              <a href="#about" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
+              <a href="/about" className="block px-3 py-2 text-slate-700 hover:text-blue-600 transition-colors duration-200 font-medium">
                 About
               </a>
               <button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 transition-all duration-200">

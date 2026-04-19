@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ArrowRight, Shield, Clock, Award, Link, Locate } from 'lucide-react';
+import { ArrowRight, Shield, Clock, Award, Locate } from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
@@ -33,21 +33,21 @@ const Home: React.FC = () => {
               <span className="flex items-center justify-center space-x-2">
                 <span>Book Your Flight</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                <Link
-                  to="/Flights"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl"
-                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
-                ></Link>
+                <a
+                  href="/flights"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                </a>
               </span>
             </button>
             <button className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
               Explore Destinations
               <Locate className="h-5 w-5 inline-block ml-2" />
-              <Link
-                  to="/Flights"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl"
-                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
-              ></Link>
+              <a
+                href="/destinations"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+              </a>
             </button>
           </div>
 
@@ -75,13 +75,6 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

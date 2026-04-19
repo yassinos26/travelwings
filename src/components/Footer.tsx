@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Plane, Facebook, Linkedin, Instagram, Youtube, Mail, Phone, MapPin, Link } from 'lucide-react';
+import { Plane, Facebook, Linkedin, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -78,18 +78,16 @@ const Footer: React.FC = () => {
               © 2025 SkyWings . created by yassine mellouli.
             </div>
             <div className="flex items-center space-x-8">
-              <Link
-                  to="/PrivacyPolicy"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl"
-                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
-                >Privacy Policy
-              </Link>
-              <Link
-                  to="/TermsofService"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all hover:opacity-90 hover:shadow-xl"
-                  style={{ background: "linear-gradient(135deg, #EC4899, #A855F7)" }}
-                >Terms of Service
-              </Link>
+              <a href="/privacy"
+              className="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Privacy Policy
+              </a>
+              <a href="/terms"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                Terms of Service
+              </a>
             </div>
           </div>
         </div>
