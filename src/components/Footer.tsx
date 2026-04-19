@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Plane, Facebook, Linkedin, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router';
 
 const Footer: React.FC = () => {
   return (
@@ -41,10 +42,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="/flights" className="text-gray-300 hover:text-white transition-colors duration-200">Book a Flight</a></li>
-              <li><a href="/destinations" className="text-gray-300 hover:text-white transition-colors duration-200">Manage Booking</a></li>
-              <li><a href="/Deals" className="text-gray-300 hover:text-white transition-colors duration-200">Check-in Online</a></li>
-              <li><a href="/Deals" className="text-gray-300 hover:text-white transition-colors duration-200">Travel Insurance</a></li>
+              <li><Link to="/flights" className="text-gray-300 hover:text-white transition-colors duration-200">Book a Flight</Link></li>
+              <li><Link to="/destinations" className="text-gray-300 hover:text-white transition-colors duration-200">Manage Booking</Link></li>
+              <li><Link to="/Deals" className="text-gray-300 hover:text-white transition-colors duration-200">Check-in Online</Link></li>
+              <li><Link to="/Deals" className="text-gray-300 hover:text-white transition-colors duration-200">Travel Insurance</Link></li>
             </ul>
           </div>
 
@@ -78,16 +79,16 @@ const Footer: React.FC = () => {
               © 2025 SkyWings . created by yassine mellouli.
             </div>
             <div className="flex items-center space-x-8">
-              <a href="/privacy"
-              className="text-gray-300 hover:text-white transition-colors duration-200"
+              <Link to="/privacy"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Privacy Policy
-              </a>
-              <a href="/terms"
+              </Link>
+              <Link to="/terms"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
