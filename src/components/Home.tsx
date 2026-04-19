@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ArrowRight, Shield, Clock, Award, Locate } from 'lucide-react';
+import { ArrowRight, Shield, Clock, Award, Locate, Link } from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
@@ -33,21 +33,21 @@ const Home: React.FC = () => {
               <span className="flex items-center justify-center space-x-2">
                 <span>Book Your Flight</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                <a
-                  href="/flights"
+                <Link
+                  to="/flights"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                </a>
+                </Link>
               </span>
             </button>
             <button className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
               Explore Destinations
               <Locate className="h-5 w-5 inline-block ml-2" />
-              <a
-                href="/destinations"
+              <Link
+                to="/destinations"
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
-              </a>
+              </Link>
             </button>
           </div>
 
