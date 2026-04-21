@@ -1,1 +1,0 @@
-export const KONNECT_API = "https://api.konnect.network/api/v2/payments/init-payment";
