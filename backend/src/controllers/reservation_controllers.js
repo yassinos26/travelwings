@@ -2,12 +2,30 @@ const Reservation = require("../models/Reservation");
 
 // Create Reservation 
 exports.createReservation = async (req, res) => {
-  const reservation = await Reservation.create({
-    ...req.body,
-    user: req.user.id
-  });
+  try {
+    let price = 0;
 
-  res.json(reservation);
+    if (req.body.flight) {
+      const flight = await Flight.findById(req.body.flight);
+      price = flight.price;
+    }
+
+    if (req.body.deal) {
+      const deal = await Deal.findById(req.body.deal);
+      price = deal.price;
+    }
+
+    const reservation = await Reservation.create({
+      user: req.user.id,
+      flight: req.body.flight,
+      deal: req.body.deal,
+      totalPrice: price
+    });
+
+    res.json(reservation);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
 // Get My Reservations

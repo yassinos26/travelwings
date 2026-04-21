@@ -1,9 +1,8 @@
-import express from "express";
 import { initPayment } from "../controllers/payment_controllers.js";
 
 const router = express.Router();
 
-router.post("/pay", initPayment);
+router.post("/payment", initPayment);
 
 export default router;
 console.log("Payment routes loaded");

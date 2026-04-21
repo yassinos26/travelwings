@@ -1,0 +1,15 @@
+const swaggerJsdoc = require("swagger-jsdoc");
+
+const options = {
+    definition: {
+        openapi: "3.0.0",
+        info: {
+        title: "Travel API",
+        version: "1.0.0"
+        }
+    },
+    apis: ["./src/routes/*.js"]
+};
+
+module.exports = swaggerJsdoc(options);
+console.log("Swagger config loaded");

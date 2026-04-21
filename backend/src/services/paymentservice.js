@@ -8,7 +8,7 @@ export const createPayment = async (amount) => {
       receiverWalletId: process.env.KONNECT_WALLET_ID,
       amount: amount * 1000, // millimes
       token: "TND",
-      description: "Donation Baby Hypothermia",
+      description: "Payement for TravelWings",
       acceptedPaymentMethods: ["wallet", "bank_card"],
       successUrl: `${process.env.FRONT_URL}/success`,
       failUrl: `${process.env.FRONT_URL}/fail`,

@@ -3,10 +3,17 @@ const Deal = require("../models/Deal");
 // Get Deals
 exports.getDeals = async (req, res) => {
   try {
-    const { destination } = req.query;
+    const { destination, minPrice, maxPrice } = req.query;
 
-    const query = {};
+    let query = {};
+
     if (destination) query.destination = destination;
+
+    if (minPrice || maxPrice) {
+      query.price = {};
+      if (minPrice) query.price.$gte = Number(minPrice);
+      if (maxPrice) query.price.$lte = Number(maxPrice);
+    }
 
     const deals = await Deal.find(query);
 

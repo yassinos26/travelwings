@@ -1,8 +1,13 @@
 import { createPayment } from "../services/paymentservice.js";
 const Payment = require("../models/Payment");
 
-export const initPayment = async (req, res) => {
+exports.initPayment = async (req, res) => {
   try {
+    const Payment = await Payment.create({
+      user: req.user.id,
+      amount: req.body.amount,
+      status: "pending"
+    });
     const { amount } = req.body;
 
     const data = await createPayment(amount);

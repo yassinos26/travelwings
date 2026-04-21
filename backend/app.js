@@ -1,9 +1,33 @@
 const express = require("express");
 const cors = require("cors");
 
+const helmet = require("helmet");
+const rateLimit = require("express-rate-limit");
+
+const swaggerUi = require("swagger-ui-express");
+const specs = require("./src/config/swagger");
+
+// const logger = require("../utils/logger");
+
 const app = express();
 
+// // logger installation
+// logger.info("Server started");
+// logger.error(err.message);
+
+// swagger config
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+
+// security Methods
+app.use(helmet());
+
+app.use(rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100
+}));
+
 // middlewares
+app.use(require("./src/middlewares/error"));
 app.use(cors());
 app.use(express.json());
 
