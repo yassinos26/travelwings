@@ -12,7 +12,7 @@ app.use("/api/auth", require("./src/routes/auth_routes"));
 app.use("/api/flights", require("./src/routes/flight_routes"));
 app.use("/api/deals", require("./src/routes/deal_routes"));
 app.use("/api/reservations", require("./src/routes/reservation_routes"));
-// app.use("/api/payments", require("./src/routes/payment_routes"));
+app.use("/api/payments", require("./src/routes/payment_routes"));
 
 // test route
 app.get("/", (req, res) => {
@@ -20,3 +20,4 @@ app.get("/", (req, res) => {
 });
 
 module.exports = app;
+console.log("Express app loaded");

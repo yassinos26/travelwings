@@ -9,3 +9,4 @@ const dealSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("Deal", dealSchema);
+console.log("Deal model loaded");

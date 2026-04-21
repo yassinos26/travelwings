@@ -1,4 +1,5 @@
 import { createPayment } from "../services/paymentservice.js";
+const Payment = require("../models/Payment");
 
 export const initPayment = async (req, res) => {
   try {

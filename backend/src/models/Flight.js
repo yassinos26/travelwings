@@ -10,3 +10,4 @@ const flightSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("Flight", flightSchema);
+console.log("Flight model loaded");
